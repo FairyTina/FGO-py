@@ -99,7 +99,7 @@ class XDetectBase(metaclass=logMeta(logger)):
     def setupWeeklyMission(self):XDetectBase._weeklyMission=self._crop((603,250,1092,710))
     def isAddFriend(self):return self._compare(self.tmpl.ADDFRIEND,(161,574,499,656))
     def isApEmpty(self):return self._compare(self.tmpl.APEMPTY,(522,582,758,652))
-    def isBattleContinue(self):return self._compare(self.tmpl.BATTLECONTINUE,(704,530,976,601))
+    def isBattleContinue(self):return self._compare(self.tmpl.BATTLECONTINUE,(704,548,976,619))
     def isBattleDefeated(self):return self._compare(self.tmpl.DEFEATED,(603,100,690,176))
     def isBattleFinished(self):return self._compare(self.tmpl.DROPITEM,(110,30,264,76))
     def isBattleFormation(self):return self._compare(self.tmpl.BATTLEBEGIN,(1070,632,1270,710))
@@ -206,7 +206,7 @@ class XDetectCN(XDetectBase):
 class XDetectJP(XDetectBase):
     tmpl=IMG_JP
     ocr=OCR.JA
-    def isBattleContinue(self):return self._compare(self.tmpl.BATTLECONTINUE,(704,547,976,618))
+    def isBattleContinue(self):return self._compare(self.tmpl.BATTLECONTINUE,(704,548,976,619))
     def getTeamIndex(self):return self._loc(self.tmpl.TEAMINDEX,(452,34,828,62))[2][0]//25
 class XDetectNA(XDetectBase):
     tmpl=IMG_NA
